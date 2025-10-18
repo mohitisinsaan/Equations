@@ -8,43 +8,93 @@
   <link rel="icon" href="orb.png" type="image/png" />
 </head>
 <body>
-  <div id="boot-screen">
-    <h1 class="shine">PROJECT BLACKCOMB</h1>
-  </div>
-  <div id="welcome-popup" class="hidden">
-    <div class="popup-content glass">
-      <h2>Welcome to our Third Beta</h2>
-      <p>We’re still developing the app, but we’re truly happy that you visited us.  
-      Every beta makes us smoother, sleeker, and closer to perfect — just like Steve would’ve wanted.</p>
-      <button id="continue-btn">Continue</button>
+  <!-- RC Bubble -->
+  <div id="rc-bubble" class="rc-bubble">RC 1</div>
+
+  <!-- Boot Screen -->
+  <div id="boot-screen" class="boot-overlay" aria-hidden="false">
+    <div class="boot-center">
+      <div class="boot-title">Equations</div>
+      <div class="boot-bar"><div class="boot-progress" id="boot-progress"></div></div>
     </div>
   </div>
+
+  <!-- Welcome Modal -->
+  <div id="welcome-modal" class="modal hidden" aria-hidden="true">
+    <div class="modal-backdrop" id="modal-backdrop"></div>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <h2 id="modal-title">Welcome — Equations RC 1</h2>
+      <p id="modal-text">With the beta phase over, we have decided to call the project <strong>Equations</strong>. Welcome to our RC 1 release. The app isn't developed yet — we're focusing on the website first.</p>
+      <div class="modal-actions">
+        <button id="modal-close" class="btn primary">Continue</button>
+      </div>
+    </div>
+  </div>
+
   <header class="banner glass">
-    <h1>RC 1</h1>
+    <h1>Equations</h1>
   </header>
+
   <nav class="nav glass">
     <a href="#home">Home</a>
     <a href="#about">About</a>
-    <a href="#download">Download</a>
+    <a href="#features">Features</a>
   </nav>
-  <main id="home" class="glass">
-    <h2>Welcome to Equations</h2>
-    <p>A next-gen news and knowledge platform — delivering Government, World, Economy, Tech, and General Knowledge updates in one sleek experience.</p>
-    <div class="features">
-      <button class="expand-btn">Government News</button>
-      <div class="expand-content">Stay informed with official policy updates, press releases, and verified government insights.</div>
-      <button class="expand-btn">World & Economy Affairs</button>
-      <div class="expand-content">Explore world events, trade dynamics, and key economic developments shaping our future.</div>
-      <button class="expand-btn">Tech & Innovation</button>
-      <div class="expand-content">Uncover breakthroughs, innovations, and the minds redefining technology.</div>
-      <button class="expand-btn">General Knowledge Hub</button>
-      <div class="expand-content">Boost your intellect with curated GK facts, trivia, and educational content.</div>
-      <button class="expand-btn">Current Affairs</button>
-      <div class="expand-content">Catch up with trending and critical current affairs — updated daily.</div>
-      <button class="expand-btn">Coming Soon</button>
-      <div class="expand-content">More features on the horizon. Stay tuned — we’re just getting started.</div>
-    </div>
+
+  <main id="home" class="container">
+    <section class="intro glass">
+      <h2>Welcome to Equations</h2>
+      <p>A next-gen information platform delivering Government, World, Economy, Sports, Tech, and Science coverage — website-first, app coming soon.</p>
+    </section>
+
+    <section id="features" class="features glass">
+      <h3>Features</h3>
+      <div class="grid" id="features-grid">
+        <div class="bubble" data-key="govt">
+          <div class="bubble-title">Government News</div>
+          <div class="bubble-desc">Policy updates, local governance, laws, and official notices.</div>
+        </div>
+        <div class="bubble" data-key="world">
+          <div class="bubble-title">World Affairs</div>
+          <div class="bubble-desc">Geopolitics, diplomacy and global events.</div>
+        </div>
+        <div class="bubble" data-key="economy">
+          <div class="bubble-title">Economy Affairs</div>
+          <div class="bubble-desc">Markets, macro data, fiscal policy and economic trends.</div>
+        </div>
+        <div class="bubble" data-key="sports">
+          <div class="bubble-title">Sports</div>
+          <div class="bubble-desc">Scores, commentary, and athlete stories.</div>
+        </div>
+        <div class="bubble" data-key="tech">
+          <div class="bubble-title">Tech</div>
+          <div class="bubble-desc">Product launches, startups, and technology deep dives.</div>
+        </div>
+        <div class="bubble" data-key="science">
+          <div class="bubble-title">Science</div>
+          <div class="bubble-desc">Research news, discoveries, and accessible explainers.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="liquid-glass glass">
+      <h3>Liquid Glass</h3>
+      <p>Sleek translucent surfaces, layered depth, and neon accents — the UI language for Equations.</p>
+    </section>
+
+    <section class="about glass">
+      <h3>About Equations</h3>
+      <p>Equations curates high-signal coverage across several domains. The website is our priority for RC1; the app follows.</p>
+    </section>
   </main>
+
+  <!-- Feature details panel -->
+  <aside id="feature-panel" class="feature-panel hidden" aria-hidden="true">
+    <button id="panel-close" class="panel-close" aria-label="Close panel">✕</button>
+    <h4 id="panel-title">Title</h4>
+    <p id="panel-body">Details...</p>
+  </aside>
+
   <script src="script.js"></script>
 </body>
 </html>
