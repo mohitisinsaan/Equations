@@ -1,18 +1,16 @@
+function toggleDetail(element) {
+  const detail = element.querySelector('.detail');
+  detail.style.display = detail.style.display === 'block' ? 'none' : 'block';
+}
 
-// Boot animation: hide after 6 seconds reliably
-(function(){
-  const boot = document.getElementById('boot-screen');
-  setTimeout(()=> {
-    if(boot) boot.classList.add('hidden');
-  }, 6000);
-})();
+function closePopup() {
+  document.getElementById('welcomePopup').style.display = 'none';
+}
 
-// Expandable feature buttons
-document.querySelectorAll('.expand-btn').forEach((btn) => {
-  btn.addEventListener('click', () => {
-    const content = btn.nextElementSibling;
-    const isOpen = content.style.display === 'block';
-    document.querySelectorAll('.expand-content').forEach(c => c.style.display = 'none');
-    content.style.display = isOpen ? 'none' : 'block';
-  });
-});
+window.onload = function () {
+  if (localStorage.getItem('visited')) {
+    document.getElementById('welcomePopup').style.display = 'flex';
+  } else {
+    localStorage.setItem('visited', true);
+  }
+};

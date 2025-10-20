@@ -3,54 +3,40 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Equations — RC 1</title>
+  <title>Equations</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="orb.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Boot Screen -->
-  <div id="boot-screen">
-    <h1 class="shine">EQUATIONS</h1>
+  <div class="welcome-popup" id="welcomePopup">
+    <div class="popup-content">
+      <h2>Welcome back to Equations 👋</h2>
+      <p>Stay informed. Stay empowered.</p>
+      <button onclick="closePopup()">Close</button>
+    </div>
   </div>
 
-  <!-- RC-1 Bubble at Top Center -->
-  <div class="rc-bubble">RC-1</div>
-
-  <!-- Main Site -->
-  <header class="banner glass">
-    <h1>Equations</h1>
+  <header class="glass-header">
+    <img src="assets/logo.png" alt="Equations Logo" class="logo" />
+    <h1>Reimagining Information. Empowering Minds.</h1>
+    <p class="subtext">Where clarity meets curiosity — Equations delivers insight with elegance.</p>
   </header>
 
-  <nav class="nav glass">
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#download">Download</a>
-  </nav>
-
-  <main id="home" class="glass">
-    <h2>Welcome to Equations</h2>
-    <p>A next-gen news and knowledge platform — delivering Government, World, Economy, Tech, and Science updates in one sleek experience.</p>
-
-    <div class="features">
-      <button class="expand-btn">Government News</button>
-      <div class="expand-content">Stay informed with official policy updates, press releases, and verified government insights.</div>
-
-      <button class="expand-btn">World & Economy Affairs</button>
-      <div class="expand-content">Explore world events, trade dynamics, and key economic developments shaping our future.</div>
-
-      <button class="expand-btn">Tech & Innovation</button>
-      <div class="expand-content">Uncover breakthroughs, innovations, and the minds redefining technology.</div>
-
-      <button class="expand-btn">Science & Knowledge Hub</button>
-      <div class="expand-content">Boost your intellect with curated science explainers and educational content.</div>
-
-      <button class="expand-btn">Current Affairs</button>
-      <div class="expand-content">Catch up with trending and critical current affairs — updated regularly.</div>
-
-      <button class="expand-btn">Coming Soon</button>
-      <div class="expand-content">More features on the horizon. Stay tuned — we’re just getting started.</div>
+  <section class="features">
+    <div class="feature-bubble" onclick="toggleDetail(this)">
+      <h3>🌐 World Affairs</h3>
+      <p class="detail">Latest updates on global events, diplomacy, and geopolitics.</p>
     </div>
-  </main>
+    <div class="feature-bubble" onclick="toggleDetail(this)">
+      <h3>📊 Economy Insights</h3>
+      <p class="detail">Trends, policies, and market movements decoded.</p>
+    </div>
+    <div class="feature-bubble" onclick="toggleDetail(this)">
+      <h3>🧪 Science & IT</h3>
+      <p class="detail">Breakthroughs, basics, and digital evolution simplified.</p>
+    </div>
+  </section>
 
   <script src="script.js"></script>
 </body>
