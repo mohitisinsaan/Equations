@@ -1,13 +1,76 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Equations</title>
-    <script type="module" crossorigin src="/src/main.jsx"></script>
-    <link rel="stylesheet" href="/src/index.css">
-  </head>
-  <body>
-    <div id="root"></div>
-  </body>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Equations — Liquid Glass Edition</title>
+  <link rel="stylesheet" href="styles.css">
+  <meta name="description" content="Equations — precision, passion, perfection. Still in development.">
+</head>
+<body class="dark">
+  <!-- Boot Animation -->
+  <div id="boot" class="boot">
+    <div class="boot-inner" role="img" aria-label="Equations boot animation">
+      <div class="bubble">
+        <span class="eq">Equations</span>
+        <small class="tag">rc 1</small>
+      </div>
+      <div class="loader" aria-hidden="true"></div>
+    </div>
+  </div>
+
+  <!-- Main site -->
+  <main id="app" class="hidden">
+    <header class="top">
+      <div class="logo">
+        <div class="logo-glass">
+          <span class="logo-text">Equations</span>
+          <span class="logo-dot"></span>
+        </div>
+      </div>
+      <nav class="nav">
+        <button class="btn skeu">Get Started</button>
+        <button class="btn skeu ghost">Docs</button>
+      </nav>
+    </header>
+
+    <section class="hero liquid">
+      <h1>Precision. Passion. Perfection.</h1>
+      <p class="lead">Liquid Glass UI · Skeuomorphism · Dark Mode · Neon green + purple accents</p>
+      <div class="card grid">
+        <article class="feature">
+          <h3>Optimized Boot</h3>
+          <p>Fast, interruptible, and smooth — no freezes, no drama.</p>
+        </article>
+        <article class="feature">
+          <h3>Welcome Popup</h3>
+          <p>Greets first-time visitors only. Returning users won't get spammed.</p>
+        </article>
+        <article class="feature">
+          <h3>Design</h3>
+          <p>Liquid glass surfaces with tactile skeuomorphic controls, tuned for dark mode.</p>
+        </article>
+      </div>
+    </section>
+
+    <footer class="foot">
+      <p>App status: <strong>In development</strong></p>
+      <p class="muted">Motto: Precision. Passion. Perfection.</p>
+    </footer>
+  </main>
+
+  <!-- New-user popup (shown only for new users) -->
+  <div id="welcomeModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="welcomeTitle">
+    <div class="modal-card liquid">
+      <h2 id="welcomeTitle">Welcome to Equations</h2>
+      <p>We're glad you're here. The app is still in development — expect changes. Enjoy the preview.</p>
+      <div class="modal-actions">
+        <button id="takeTour" class="btn skeu">Take a quick tour</button>
+        <button id="dismiss" class="btn skeu ghost">Maybe later</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="scripts.js" defer></script>
+</body>
 </html>
