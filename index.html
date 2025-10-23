@@ -1,43 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Equations</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;600&display=swap" rel="stylesheet">
-</head>
-<body>
-  <div class="welcome-popup" id="welcomePopup">
-    <div class="popup-content">
-      <h2>Welcome back to Equations 👋</h2>
-      <p>Stay informed. Stay empowered.</p>
-      <button onclick="closePopup()">Close</button>
-    </div>
-  </div>
-
-  <header class="glass-header">
-    <img src="assets/logo.png" alt="Equations Logo" class="logo" />
-    <h1>Reimagining Information. Empowering Minds.</h1>
-    <p class="subtext">Where clarity meets curiosity — Equations delivers insight with elegance.</p>
-  </header>
-
-  <section class="features">
-    <div class="feature-bubble" onclick="toggleDetail(this)">
-      <h3>🌐 World Affairs</h3>
-      <p class="detail">Latest updates on global events, diplomacy, and geopolitics.</p>
-    </div>
-    <div class="feature-bubble" onclick="toggleDetail(this)">
-      <h3>📊 Economy Insights</h3>
-      <p class="detail">Trends, policies, and market movements decoded.</p>
-    </div>
-    <div class="feature-bubble" onclick="toggleDetail(this)">
-      <h3>🧪 Science & IT</h3>
-      <p class="detail">Breakthroughs, basics, and digital evolution simplified.</p>
-    </div>
-  </section>
-
-  <script src="script.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Equations</title>
+    <script type="module" crossorigin src="/src/main.jsx"></script>
+    <link rel="stylesheet" href="/src/index.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
 </html>
